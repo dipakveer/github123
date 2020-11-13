@@ -1,0 +1,75 @@
+<div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+
+
+
+ul.dropdown-menu.mylist-dropdown-menu.p-1(id="#dropdownList"+video.id aria-labelledby="myDropdown"+video.id style="min-width:30%;")
+    input#csrfToken(type="hidden" name="_csrf" value=_csrf)
+    li
+        .d-flex-inline
+            i.pt-1.ml-4.mr-1.close.fad.fa-times.cursor-pointer(style="font-size: 1.4rem;") 
+            .flex-grow-1.fa-lg.text.text-black.mr-2.pl-2.pt-1.pr-4.font-weight-bold Save to list:
+               
+    li.p-0
+        span.text.text-gray.message-list.pl-2.fa-xs  Max 7 lists are allowed
+    .dropdown-divider                                
+    li(class="mylist"+video.id)
+    .row.border-top-0.rounded-0.m-2.ml-4.justify-content-center.pb-2(id="mylist-listing-spinner"+video.id)
+       include ../../../spinner           
+    .dropdown-divider.d-none(class="divider-"+video.id)                                        
+    li.input-group.pt-1.pr-1.pb-1    
+        input.form-control.d-none.ml-3(type="text" class="new-list-field"+video.id data-contentid=videoId placeholder="Create new list")                  
+    li
+        button.d-none.ml-3.btn.btn-primary.btn-md(class="createList"+video.id type='button' disabled='disabled') Create 
+
+
+  <!-- Accordion card -->
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingOne1">
+      <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+        aria-controls="collapseOne1">
+        <h5 class="mb-0">
+          Collapsible Group Item #1 <i class="fas fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+      data-parent="#accordionEx">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+        nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+        labore sustainable VHS.
+      </div>
+    </div>
+
+  </div>
+  // Accordion wrapper
+  i(type='button' data-toggle='collapse' data-target='#collapseExample' aria-expanded='false' aria-controls='collapseExample')
+ 
+  
+  #accordionEx.accordion.md-accordion(role='tablist' aria-multiselectable='true')
+  // Accordion card
+  .card
+    // Card header
+    #headingOne1.card-header(role='tab')
+      a(data-toggle='collapse' data-parent='#accordionEx' href='#collapseOne1' aria-expanded='true' aria-controls='collapseOne1')
+        h5.mb-0          
+          i.fas.fa-angle-down.rotate-icon
+    // Card body
+    #collapseOne1.collapse.show(role='tabpanel' aria-labelledby='headingOne1' data-parent='#accordionEx')
+      .card-body
+        | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+        | wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+        | eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+        | assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+        | nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+        | farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus
+        | labore sustainable VHS.
